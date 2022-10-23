@@ -27,4 +27,3 @@ func TestNumericOnlyCase2(t *testing.T) {
 		t.Error("assertion error")
 	}
 }
-
