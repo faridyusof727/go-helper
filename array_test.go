@@ -64,3 +64,13 @@ func TestAddString(t *testing.T) {
 		t.Error("assert fail")
 	}
 }
+
+func TestAddStringPt(t *testing.T) {
+	text := []string{"I", "love", "you"}
+
+	gohelper.ArrayAddPt(&text, "Gordon")
+
+	if text[3] != "Gordon" {
+		t.Error("assert fail")
+	}
+}
