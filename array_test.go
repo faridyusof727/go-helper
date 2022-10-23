@@ -1,6 +1,7 @@
 package gohelper_test
 
 import (
+	"fmt"
 	"testing"
 
 	gohelper "github.com/faridyusof727/go-helper/v2"
@@ -71,6 +72,16 @@ func TestAddStringPt(t *testing.T) {
 	gohelper.ArrayAddPt(&text, "Gordon")
 
 	if text[3] != "Gordon" {
+		t.Error("assert fail")
+	}
+}
+
+func TestAddIntegerPt(t *testing.T) {
+	primes := []int{2, 3, 5, 7, 11, 13}
+
+	gohelper.ArrayAddPt(&primes, 20)
+
+	if primes[6] != 20 {
 		t.Error("assert fail")
 	}
 }
