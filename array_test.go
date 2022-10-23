@@ -1,7 +1,6 @@
 package gohelper_test
 
 import (
-	"fmt"
 	"testing"
 
 	gohelper "github.com/faridyusof727/go-helper/v2"
