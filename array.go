@@ -1,7 +1,7 @@
 package gohelper
 
 import "reflect"
-
+// test
 func ArrayIsAccessible(v interface{}) bool {
 	rt := reflect.TypeOf(v)
 	switch rt.Kind() {
