@@ -1,6 +1,11 @@
 package gohelper
 
-type Collection[T any] struct {
+import "golang.org/x/exp/constraints"
+
+type Collection[T interface {
+	constraints.Ordered
+	comparable
+}] struct {
 	data []T
 }
 
@@ -13,6 +18,9 @@ func (c *Collection[T]) Get() []T {
 	return c.data
 }
 
-func NewCollection[T any]() Collector[T] {
+func NewCollection[T interface {
+	constraints.Ordered
+	comparable
+}]() Collector[T] {
 	return &Collection[T]{}
 }
